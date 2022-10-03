@@ -1,0 +1,46 @@
+<div class="container centerCustom">
+    <mat-toolbar>
+        <span>Crea tu HEROE</span>
+     </mat-toolbar>
+     <mat-card style="margin-top: 10px;">
+        <form [formGroup]="form">
+            <mat-grid-list cols="4" rowHeight="80px">
+                <mat-grid-tile [colspan]="4" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput autocomplete="of" class="title"  formControlName="characters" type="text" placeholder="Nombre...">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label >Superpoder</mat-label>
+                        <input matInput autocomplete="of"  class="title"  formControlName="power" type="text" placeholder="Superpoder...">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Héroe</mat-label>
+                        <input matInput autocomplete="of"  class="title"  formControlName="superhero"  type="text" placeholder="Héroe...">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Miembro de</mat-label>
+                        <mat-select formControlName="publisher"  >
+                          <mat-option *ngFor="let item of publisher" [value]="item" >
+                            {{item}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4" [rowspan]="1">
+                    <button [disabled]="form.invalid" type="submit" mat-raised-button color="secondary"(click)="saveHeroe()" class="me">Crear</button>         
+                    <button routerLink="/dashboard" type="button"  mat-raised-button color="warn"> Cancelar  </button>         
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+</div>
+
+
+

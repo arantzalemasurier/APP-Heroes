@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "heroes-app-test-82d0b": {
+      "hosting": {
+        "HeroesApp": [
+          "heroes-app-test-82d0b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "heroes-app-test-82d0b"
+  }
+}
